@@ -1,5 +1,12 @@
 - name: ping the server
   hosts: web
+  vars_prompt:
+    - name: ansible_user
+      prompt: "Enter SSH username"
+      private: no
+    - name: ansible_password
+      prompt: "Enter SSH password"
+      private: yes
   tasks: #list of tasks/modules/collections
   - name: pinging the server
     ansible.builtin.ping:
