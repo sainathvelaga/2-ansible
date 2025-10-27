@@ -1,0 +1,12 @@
+- name: PLAY-1
+  hosts: localhost
+  tasks:
+    - name: PLAY-1 and TASK-1
+      debug:
+        msg: "This is PLAY-1 and TASK-1"
+- name: PLAY-2
+  hosts: localhost
+  tasks:
+    - name: PLAY-2 and TASK-1
+      debug:
+        msg: "This is PLAY-2 and TASK-1"
