@@ -1,0 +1,33 @@
+- name: data-types
+  hosts: localhost
+  vars:
+    string_var: "This is a string"
+    int_var: 42
+    float_var: 3.14
+    bool_var: true
+    list_var:
+      - item1
+      - item2
+      - item3
+    dict_var:
+      key1: value1
+      key2: value2
+  tasks:
+  - name: print string variable
+    ansible.builtin.debug:
+      msg: "String Variable: {{ string_var }}"
+  - name: print integer variable
+    ansible.builtin.debug:
+      msg: "Integer Variable: {{ int_var }}"
+  - name: print float variable
+    ansible.builtin.debug:
+      msg: "Float Variable: {{ float_var }}"
+  - name: print boolean variable
+    ansible.builtin.debug:
+      msg: "Boolean Variable: {{ bool_var }}"
+  - name: print list variable
+    ansible.builtin.debug:
+      msg: "List Variable: {{ list_var }}"
+  - name: print dictionary variable
+    ansible.builtin.debug:
+      msg: "Dictionary Variable: {{ dict_var }}"
